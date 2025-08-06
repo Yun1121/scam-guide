@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Support Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="standard-font default-contrast">
+    <!-- Page 1: Homepage -->
+    <div class="page active" id="homepage">
+        <header>
+            <div class="header-left">
+                <h1 class="logo">Senior Support</h1>
+            </div>
+            <div class="header-right">
+                <button id="accessibility-button" aria-label="Accessibility options" class="header-button">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button id="login-button" aria-label="Login" class="header-button">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="home-content">
+            <div class="voice-assistant-container">
+                <button id="voice-assistant-button" class="primary-button voice-button" aria-label="Voice Assistant">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <h2>Click here to tell us what help you need</h2>
+            </div>
+
+            <div class="home-search-container">
+                <input type="text" placeholder="Search for help..." class="home-search-input">
+                <button class="home-search-button" id="home-search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="categories-container">
+                <div class="category-card" id="shopping-category">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Shopping & Consumer</h3>
+                </div>
+                <div class="category-card" id="housing-category">
+                    <i class="fas fa-home"></i>
+                    <h3>Housing & Renting</h3>
+                </div>
+                <div class="category-card" id="scams-category">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Scams & Fraud</h3>
+                </div>
+                <div class="category-card" id="community-category">
+                    <i class="fas fa-users"></i>
+                    <h3>Community & Help</h3>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <a href="#" id="about-link">About Us</a>
+            <a href="#" id="contact-link">Contact</a>
+        </footer>
+    </div>
+
+    <!-- Page 2: AI Voice Interface -->
+    <div class="page" id="voice-interface">
+        <div class="voice-interface-container">
+            <div class="wave-animation">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+            <p class="voice-prompt">Please say your question, for example "What can I do if my landlord refuses to fix something?"</p>
+            <div class="ai-response">
+                <p class="response-text"></p>
+            </div>
+            <button id="end-voice-button" class="secondary-button">End Conversation</button>
+        </div>
+    </div>
+
+    <!-- Page 3: Accessibility Panel -->
+    <div class="page" id="accessibility-panel">
+        <div class="panel-container">
+            <h2>Accessibility Options</h2>
+            
+            <div class="option-group">
+                <h3>Font Size</h3>
+                <div class="option-buttons">
+                    <button class="font-size-button" data-size="standard">Standard</button>
+                    <button class="font-size-button" data-size="large">Large</button>
+                    <button class="font-size-button" data-size="larger">Larger</button>
+                    <button class="font-size-button" data-size="largest">Largest</button>
+                </div>
+            </div>
+            
+            <div class="option-group">
+                <h3>Contrast</h3>
+                <div class="option-buttons">
+                    <button class="contrast-button" data-contrast="default">Default</button>
+                    <button class="contrast-button" data-contrast="high">High Contrast</button>
+                </div>
+            </div>
+            
+            <button id="close-accessibility-panel" class="secondary-button">Close</button>
+        </div>
+    </div>
+
+    <!-- Page 4: Housing & Renting Category -->
+    <div class="page" id="housing-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button id="accessibility-button-housing" class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button id="login-button-housing" class="login-button header-button" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="category-content">
+            <h2>Housing & Renting</h2>
+
+            <section class="topic-section">
+                <h3>Popular Topics</h3>
+                <div class="topic-list">
+                    <div class="topic-card" id="repairs-topic">
+                        <i class="fas fa-tools"></i>
+                        <h4>Repairs & Maintenance</h4>
+                        <p>How to get your landlord to fix issues in your rental property.</p>
+                    </div>
+                    <div class="topic-card" id="rent-topic">
+                        <i class="fas fa-money-bill"></i>
+                        <h4>Rent & Bond Issues</h4>
+                        <p>Managing rent increases, late payments, and securing your bond refund.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <h3>Guides & Tools</h3>
+                <div class="guide-list">
+                    <div class="guide-card" id="repair-request-guide">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>How to Formally Request Repairs</h4>
+                        <p>Step-by-step guide to properly document and request maintenance from your landlord.</p>
+                    </div>
+                    <div class="guide-card" id="tenant-rights-tool">
+                        <i class="fas fa-balance-scale"></i>
+                        <h4>Tenant Rights Checker Tool</h4>
+                        <p>Answer a few questions to understand your legal rights in your current situation.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Page 5: Guide Article Page (Repairs & Maintenance) -->
+    <div class="page" id="repairs-guide-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button class="login-button header-button" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="guide-content">
+            <h2>Repairs & Maintenance</h2>
+            
+            <div class="guide-actions">
+                <button id="read-aloud-button" class="action-button">
+                    <i class="fas fa-volume-up"></i> Read this page aloud
+                </button>
+                <button id="save-guide-button" class="action-button">
+                    <i class="fas fa-bookmark"></i> Save to My Account
+                </button>
+                <button id="download-template-button" class="action-button">
+                    <i class="fas fa-download"></i> Download Repair Notice Template
+                </button>
+            </div>
+
+            <article class="guide-article">
+                <h3>Understanding Your Rights as a Tenant</h3>
+                
+                <p>As a tenant, you have the right to live in a property that is safe, secure, and in good repair. Your landlord is responsible for maintaining the structure and exterior of your home, as well as keeping the installations for water, gas, electricity, sanitation, and heating in proper working order.</p>
+                
+                <h3>Steps to Request Repairs</h3>
+                
+                <ol>
+                    <li><strong>Identify the issue:</strong> Take photos and notes about the problem.</li>
+                    <li><strong>Notify your landlord:</strong> Contact them in writing, describing the issue clearly.</li>
+                    <li><strong>Allow reasonable time:</strong> Your landlord should respond within a reasonable timeframe.</li>
+                    <li><strong>Follow up:</strong> If no action is taken, send a formal repair notice.</li>
+                    <li><strong>Seek assistance:</strong> If repairs are still not done, contact your local housing authority.</li>
+                </ol>
+                
+                <h3>Sample Repair Request Letter</h3>
+                
+                <div class="sample-letter">
+                    <p>[Your Name]<br>
+                    [Your Address]<br>
+                    [City, State ZIP]<br>
+                    [Date]</p>
+                    
+                    <p>[Landlord's Name]<br>
+                    [Landlord's Address]<br>
+                    [City, State ZIP]</p>
+                    
+                    <p>Dear [Landlord's Name],</p>
+                    
+                    <p>I am writing to formally request repairs for [describe the issue] at my rental property located at [your address]. The issue began on [date] and affects my ability to [explain impact].</p>
+                    
+                    <p>According to our rental agreement and housing regulations, this repair falls under your responsibility as the property owner. I would appreciate if this matter could be addressed within [timeframe, e.g., 14 days].</p>
+                    
+                    <p>Please contact me at [your phone number] or [your email] to arrange a convenient time for the repairs to be carried out.</p>
+                    
+                    <p>Thank you for your prompt attention to this matter.</p>
+                    
+                    <p>Sincerely,<br>
+                    [Your Name]</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Page 5B: Guide Article Page (Faulty Products & Warranty) -->
+    <div class="page" id="faulty-products-guide-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button class="login-button header-button" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="guide-content">
+            <h2>Faulty Products & Warranty</h2>
+            
+            <div class="guide-actions">
+                <button id="read-aloud-faulty-button" class="action-button">
+                    <i class="fas fa-volume-up"></i> Read this page aloud
+                </button>
+                <button id="save-faulty-guide-button" class="action-button">
+                    <i class="fas fa-bookmark"></i> Save to My Account
+                </button>
+                <button id="download-complaint-template-button" class="action-button">
+                    <i class="fas fa-download"></i> Download Complaint Letter Template
+                </button>
+            </div>
+
+            <article class="guide-article">
+                <h3>Understanding Your Consumer Rights</h3>
+                
+                <p>As a consumer, you have the right to receive products that are of satisfactory quality, fit for purpose, and as described. When a product develops a fault or doesn't work as expected, you are protected by consumer laws that give you the right to a repair, replacement, or refund.</p>
+                
+                <h3>Steps to Take When You Have a Faulty Product</h3>
+                
+                <ol>
+                    <li><strong>Act quickly:</strong> Report the issue to the seller as soon as you notice the problem. Many warranties and return policies have time limits.</li>
+                    <li><strong>Gather evidence:</strong> Take photos of the fault and collect any relevant documents (receipt, warranty, product manual).</li>
+                    <li><strong>Contact the seller:</strong> Speak with the retailer first, not the manufacturer, as your contract is with the seller.</li>
+                    <li><strong>Put it in writing:</strong> If the initial contact doesn't resolve the issue, send a formal complaint letter.</li>
+                    <li><strong>Escalate if necessary:</strong> If your complaint isn't resolved, consider contacting a consumer protection agency or seeking legal advice.</li>
+                </ol>
+                
+                <h3>Understanding Warranties</h3>
+                
+                <p>There are two types of warranties you should know about:</p>
+                
+                <ul>
+                    <li><strong>Express warranty:</strong> The written warranty provided by the manufacturer or seller.</li>
+                    <li><strong>Implied warranty:</strong> Legal protections that exist regardless of whether a written warranty is provided.</li>
+                </ul>
+                
+                <p>Even if the express warranty has expired, you may still be protected by implied warranty laws for major defects.</p>
+                
+                <h3>Sample Complaint Letter Template</h3>
+                
+                <div class="sample-letter">
+                    <p>[Your Name]<br>
+                    [Your Address]<br>
+                    [City, State ZIP]<br>
+                    [Date]</p>
+                    
+                    <p>[Company Name]<br>
+                    [Customer Service Department]<br>
+                    [Company Address]<br>
+                    [City, State ZIP]</p>
+                    
+                    <p>RE: Complaint about [Product Name, Model, Serial Number]</p>
+                    
+                    <p>Dear Customer Service Manager,</p>
+                    
+                    <p>I purchased [product] on [date] from [store/website] for [amount]. [Include proof of purchase information if available].</p>
+                    
+                    <p>Unfortunately, I have experienced the following issues with this product: [describe the fault in detail, when it started, and how it affects the product's functionality].</p>
+                    
+                    <p>Under consumer protection laws, I am entitled to a [repair/replacement/refund] because this product is not of acceptable quality. I have already attempted to resolve this issue by [describe previous contact with the company].</p>
+                    
+                    <p>I would appreciate if you could [state clearly what you want - repair, replacement or refund] by [give a reasonable deadline, e.g., 14 days]. Please contact me at [your phone number] or [your email] to discuss this matter further.</p>
+                    
+                    <p>If I do not hear from you by [date], I will consider seeking assistance from [relevant consumer protection agency].</p>
+                    
+                    <p>Thank you for your prompt attention to this matter.</p>
+                    
+                    <p>Sincerely,<br>
+                    [Your Name]</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Page 6: Community & Help Page -->
+    <div class="page" id="community-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button class="login-button header-button" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="community-content">
+            <h2>Community & Help</h2>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search community topics..." class="search-input">
+                <button class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="community-options">
+                <div class="community-option" id="stories-option">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Neighbour Stories</h3>
+                    <p>Read stories from people in your community who faced similar challenges.</p>
+                </div>
+                
+                <div class="community-option" id="volunteer-option">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Ask a Volunteer</h3>
+                    <p>Get personalized assistance from our community volunteers.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Page 7: Ask a Volunteer Page -->
+    <div class="page" id="volunteer-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button class="login-button header-button" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="volunteer-content">
+            <h2>Ask a Volunteer</h2>
+            
+            <div class="question-form">
+                <p class="form-instruction">Please briefly describe your issue below:</p>
+                <textarea placeholder="Please describe your issue here..." rows="6"></textarea>
+                
+                <div class="privacy-notice">
+                    <i class="fas fa-lock"></i>
+                    <p>Your question will be anonymous. We never share your personal information.</p>
+                </div>
+                
+                <button id="submit-question" class="primary-button">Submit Anonymously</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Page 8: Login/Register Page -->
+    <div class="page" id="login-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="login-content">
+            <h2>Login to Your Account</h2>
+            
+            <div class="login-form">
+                <div class="input-group">
+                    <label for="email">Email or Phone Number</label>
+                    <input type="text" id="email" placeholder="Enter your email or phone number" class="large-input">
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" class="large-input">
+                </div>
+                
+                <div class="form-actions">
+                    <a href="#" id="forgot-password">Forgot password?</a>
+                    <button id="login-submit" class="primary-button">Login</button>
+                </div>
+                
+                <div class="register-prompt">
+                    <p>Don't have an account? <a href="#" id="register-link">Register here</a></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Page 9: My Account Dashboard -->
+    <div class="page" id="account-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button id="logout-button" class="header-button" aria-label="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="button-text">Logout</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="account-content">
+            <div class="welcome-message">
+                <h2>Hello, John!</h2>
+            </div>
+            
+            <div class="account-sections">
+                <div class="account-section" id="saved-guides-section">
+                    <h3>My Saved Guides</h3>
+                    <div class="section-content">
+                        <div class="saved-item">
+                            <i class="fas fa-file-alt"></i>
+                            <p>How to Formally Request Repairs</p>
+                        </div>
+                        <div class="saved-item">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Understanding Rental Agreements</p>
+                        </div>
+                        <div class="saved-item" id="faulty-products-saved">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Faulty Products & Warranty</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="account-section" id="questions-section">
+                    <h3>My Questions</h3>
+                    <div class="section-content">
+                        <div class="question-item" id="go-to-questions">
+                            <i class="fas fa-question-circle"></i>
+                            <p>My landlord hasn't fixed my heating for 3 weeks</p>
+                            <span class="status">Answered</span>
+                        </div>
+                        <div class="question-item">
+                            <i class="fas fa-question-circle"></i>
+                            <p>How can I dispute an unfair rent increase?</p>
+                            <span class="status pending">Pending</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="account-section" id="documents-section">
+                    <h3>My Documents</h3>
+                    <div class="section-content">
+                        <div class="document-item">
+                            <i class="fas fa-file-download"></i>
+                            <p>Repair Notice Template.docx</p>
+                        </div>
+                        <div class="document-item">
+                            <i class="fas fa-file-download"></i>
+                            <p>Product Complaint Template.docx</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Page 10: My Questions Details Page -->
+    <div class="page" id="question-details-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button class="login-button header-button" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="question-details-content">
+            <h2>My Question</h2>
+            
+            <div class="question-container">
+                <div class="question-header">
+                    <span class="question-date">Posted on: May 15, 2023</span>
+                    <span class="question-status answered">Answered</span>
+                </div>
+                
+                <div class="question-body">
+                    <p>My landlord hasn't fixed my heating for 3 weeks. I've sent multiple emails and called twice. It's getting very cold in my apartment. What are my rights in this situation?</p>
+                </div>
+            </div>
+            
+            <div class="answer-container">
+                <h3>Volunteer Response:</h3>
+                
+                <div class="answer-body">
+                    <div class="answer-header">
+                        <span class="answer-date">Answered on: May 16, 2023</span>
+                        <span class="volunteer-name">By: Housing Advisor Sarah</span>
+                    </div>
+                    
+                    <div class="answer-text">
+                        <p>Thank you for your question. I'm sorry to hear about your heating issue. This is a serious matter as heating is considered an essential service.</p>
+                        
+                        <p>Here are the steps you should take:</p>
+                        
+                        <ol>
+                            <li><strong>Send a formal repair notice:</strong> Although you've contacted your landlord verbally and by email, I recommend sending a formal written repair notice via certified mail. This creates an official record.</li>
+                            <li><strong>Specify a reasonable timeframe:</strong> In your notice, give the landlord 7 days to fix the heating (this is generally considered reasonable for essential services).</li>
+                            <li><strong>Contact your local housing authority:</strong> If the landlord fails to respond to your formal notice, you can file a complaint with your local housing or health department.</li>
+                            <li><strong>Consider repair and deduct:</strong> In some areas, tenants can hire someone to fix essential services and deduct the cost from rent, but check your local laws before doing this.</li>
+                        </ol>
+                        
+                        <p>I've attached a template for a formal repair notice that you can use. Remember to keep copies of all communications and take photos of the thermostat if possible to document the issue.</p>
+                        
+                        <p>Feel free to follow up if you need additional guidance after sending the formal notice.</p>
+                    </div>
+                    
+                    <div class="answer-actions">
+                        <button class="read-aloud-button">
+                            <i class="fas fa-volume-up"></i> Read Aloud
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Page 11: Shopping & Consumer Category -->
+    <div class="page" id="shopping-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button class="login-button header-button" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="category-content">
+            <h2>Shopping & Consumer</h2>
+
+            <section class="topic-section">
+                <h3>Popular Topics</h3>
+                <div class="topic-list">
+                    <div class="topic-card" id="returns-topic">
+                        <i class="fas fa-undo"></i>
+                        <h4>Returns & Refunds</h4>
+                        <p>Learn when you can request returns or refunds.</p>
+                    </div>
+                    <div class="topic-card" id="faulty-products-topic">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h4>Faulty Products & Warranty</h4>
+                        <p>What to do when your purchased item has quality issues or gets damaged during warranty period.</p>
+                    </div>
+                    <div class="topic-card" id="misleading-ads-topic">
+                        <i class="fas fa-bullhorn"></i>
+                        <h4>Misleading Ads & False Claims</h4>
+                        <p>What rights you have if merchant advertisements don't match the actual product.</p>
+                    </div>
+                    <div class="topic-card" id="contracts-topic">
+                        <i class="fas fa-file-contract"></i>
+                        <h4>Contracts & Service Agreements</h4>
+                        <p>Common issues with gym memberships, phone plans, and other service contracts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <h3>Practical Tools</h3>
+                <div class="guide-list">
+                    <div class="guide-card" id="rights-checker-tool">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h4>Consumer Rights Checker Tool</h4>
+                        <p>Quickly understand your rights in this situation by answering a few simple questions.</p>
+                    </div>
+                    <div class="guide-card" id="complaint-templates">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Download Complaint Letter Templates</h4>
+                        <p>Get professional and effective complaint letter templates for different situations.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Page 12: Scams & Fraud Category -->
+    <div class="page" id="scams-page">
+        <header>
+            <div class="header-left">
+                <button class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="logo">Senior Support</h1>
+                <button class="home-button header-button" aria-label="Go to homepage">
+                    <i class="fas fa-home"></i>
+                    <span class="button-text">Home</span>
+                </button>
+            </div>
+            <div class="header-right">
+                <button class="accessibility-button header-button" aria-label="Accessibility options">
+                    <i class="fas fa-universal-access"></i>
+                    <span class="button-text">Accessibility</span>
+                </button>
+                <button class="login-button header-button" aria-label="Login">
+                    <i class="fas fa-user"></i>
+                    <span class="button-text">Login</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="category-content">
+            <h2>Scams & Fraud</h2>
+
+            <section class="emergency-section">
+                <div class="emergency-box">
+                    <i class="fas fa-phone"></i>
+                    <h3>Report a Scam Now</h3>
+                    <p>If you believe you're being scammed or have disclosed personal information, click here for emergency contacts.</p>
+                    <button class="emergency-button" id="report-scam-button">Get Help Now</button>
+                </div>
+            </section>
+
+            <section class="topic-section">
+                <h3>Identify Common Scams</h3>
+                <div class="topic-list">
+                    <div class="topic-card" id="phone-scams-topic">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Phone & SMS Scams</h4>
+                        <p>Identify scam calls and messages impersonating government, banks, or delivery companies.</p>
+                    </div>
+                    <div class="topic-card" id="online-scams-topic">
+                        <i class="fas fa-laptop"></i>
+                        <h4>Online & Shopping Scams</h4>
+                        <p>How to identify fake shopping websites and phishing emails.</p>
+                    </div>
+                    <div class="topic-card" id="relationship-scams-topic">
+                        <i class="fas fa-heart"></i>
+                        <h4>Dating & Investment Scams</h4>
+                        <p>Beware of 'friends' asking for money online or 'investment opportunities' promising high returns.</p>
+                    </div>
+                    <div class="topic-card" id="unexpected-scams-topic">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <h4>Unexpected Bills & Prize Scams</h4>
+                        <p>What to do when you receive bills for services you never subscribed to or messages congratulating you on winning.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <h3>Protect Yourself</h3>
+                <div class="guide-list">
+                    <div class="guide-card" id="personal-info-protection">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>How to Protect Your Personal Information</h4>
+                        <p>Learn how to create strong passwords and protect your privacy.</p>
+                    </div>
+                    <div class="guide-card" id="verify-website">
+                        <i class="fas fa-search"></i>
+                        <h4>How to Verify a Website or Message</h4>
+                        <p>Simple steps to check if a source is trustworthy before providing any information or payment.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Success Message Overlay -->
+    <div class="overlay" id="success-overlay">
+        <div class="overlay-content">
+            <i class="fas fa-check-circle"></i>
+            <p id="success-message">Operation completed successfully!</p>
+            <button class="close-overlay">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
