@@ -411,4 +411,26 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('success-overlay').classList.remove('active');
         });
     });
+    // Phone & SMS Scams Guide page interactions
+    const readAloudPhoneButton = document.getElementById('read-aloud-phone-button');
+    if (readAloudPhoneButton) {
+        readAloudPhoneButton.addEventListener('click', function() {
+            showSuccessMessage('Reading content aloud...');
+        });
+    }
+
+    const savePhoneGuideButton = document.getElementById('save-phone-guide-button');
+    if (savePhoneGuideButton) {
+        savePhoneGuideButton.addEventListener('click', function() {
+            showSuccessMessage('Guide saved to your account!');
+        });
+    }
+
+    const downloadPhoneTemplateButton = document.getElementById('download-phone-template-button');
+    if (downloadPhoneTemplateButton) {
+        downloadPhoneTemplateButton.addEventListener('click', function() {
+            showSuccessMessage('Download started!');
+        });
+    }
+
 }); 
