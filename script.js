@@ -370,34 +370,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Scams page topic interactions (updated to navigate to subpages)
-    const phoneScamsTopic = document.getElementById('phone-scams-topic');
-    if (phoneScamsTopic) {
-        phoneScamsTopic.addEventListener('click', function () {
-            navigateTo('phone-scams-page');
-        });
-    }
+    // Scams page topic interactions
+    const scamTopics = [
+        { id: 'phone-scams-topic', target: 'phone-scams-page' },
+        { id: 'online-scams-topic', target: 'online-scams-page' },
+        { id: 'relationship-scams-topic', target: 'investment-scams-page' },
+        { id: 'unexpected-scams-topic', target: 'prize-scams-page' }
+    ];
 
-    const onlineScamsTopic = document.getElementById('online-scams-topic');
-    if (onlineScamsTopic) {
-        onlineScamsTopic.addEventListener('click', function () {
-            navigateTo('online-scams-page');
-        });
-    }
+    scamTopics.forEach(({ id, target }) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('click', () => {
+                navigateTo(target);
+            });
+        }
+    });
 
-    const relationshipScamsTopic = document.getElementById('relationship-scams-topic');
-    if (relationshipScamsTopic) {
-        relationshipScamsTopic.addEventListener('click', function () {
-            navigateTo('investment-scams-page');
-        });
-    }
-
-    const unexpectedScamsTopic = document.getElementById('unexpected-scams-topic');
-    if (unexpectedScamsTopic) {
-        unexpectedScamsTopic.addEventListener('click', function () {
-            navigateTo('prize-scams-page');
-        });
-    }
 
 
     // Scams page protection guides interactions

@@ -730,85 +730,44 @@
     </div>
 
     <!-- Page 12: Scams & Fraud Category -->
-    <div class="page" id="scams-page">
-        <header>
-            <div class="header-left">
-                <button class="back-button" aria-label="Go back">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-                <h1 class="logo">Senior Support</h1>
-                <button class="home-button header-button" aria-label="Go to homepage">
-                    <i class="fas fa-home"></i>
-                    <span class="button-text">Home</span>
-                </button>
-            </div>
-            <div class="header-right">
-                <button class="accessibility-button header-button" aria-label="Accessibility options">
-                    <i class="fas fa-universal-access"></i>
-                    <span class="button-text">Accessibility</span>
-                </button>
-                <button class="login-button header-button" aria-label="Login">
-                    <i class="fas fa-user"></i>
-                    <span class="button-text">Login</span>
-                </button>
-            </div>
-        </header>
+<!-- Existing Scams Page Content -->
+<div class="page" id="scams-page">
+  <!-- ... your existing scams-page content ... -->
+</div>
 
-        <main class="category-content">
-            <h2>Scams & Fraud</h2>
-
-            <section class="emergency-section">
-                <div class="emergency-box">
-                    <i class="fas fa-phone"></i>
-                    <h3>Report a Scam Now</h3>
-                    <p>If you believe you're being scammed or have disclosed personal information, click here for emergency contacts.</p>
-                    <button class="emergency-button" id="report-scam-button">Get Help Now</button>
-                </div>
-            </section>
-
-            <section class="topic-section">
-                <h3>Identify Common Scams</h3>
-                <div class="topic-list">
-                    <div class="topic-card" id="phone-scams-topic">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Phone & SMS Scams</h4>
-                        <p>Identify scam calls and messages impersonating government, banks, or delivery companies.</p>
-                    </div>
-                    <div class="topic-card" id="online-scams-topic">
-                        <i class="fas fa-laptop"></i>
-                        <h4>Online & Shopping Scams</h4>
-                        <p>How to identify fake shopping websites and phishing emails.</p>
-                    </div>
-                    <div class="topic-card" id="relationship-scams-topic">
-                        <i class="fas fa-heart"></i>
-                        <h4>Dating & Investment Scams</h4>
-                        <p>Beware of 'friends' asking for money online or 'investment opportunities' promising high returns.</p>
-                    </div>
-                    <div class="topic-card" id="unexpected-scams-topic">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                        <h4>Unexpected Bills & Prize Scams</h4>
-                        <p>What to do when you receive bills for services you never subscribed to or messages congratulating you on winning.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="guides-section">
-                <h3>Protect Yourself</h3>
-                <div class="guide-list">
-                    <div class="guide-card" id="personal-info-protection">
-                        <i class="fas fa-shield-alt"></i>
-                        <h4>How to Protect Your Personal Information</h4>
-                        <p>Learn how to create strong passwords and protect your privacy.</p>
-                    </div>
-                    <div class="guide-card" id="verify-website">
-                        <i class="fas fa-search"></i>
-                        <h4>How to Verify a Website or Message</h4>
-                        <p>Simple steps to check if a source is trustworthy before providing any information or payment.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
+<!-- ✅ New Phone & SMS Scams Page with Full Layout and Buttons -->
+<div class="page" id="phone-scams-page">
+  <header>
+    <div class="header-left">
+      <button class="back-button" aria-label="Go back">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h1 class="logo">Senior Support</h1>
     </div>
+  </header>
+
+  <main>
+    <h2>Phone & SMS Scams</h2>
+    <p>This guide helps you understand and avoid phone and SMS scams commonly targeting seniors.</p>
+
+    <section class="guide-content">
+      <h3>Common Scenarios</h3>
+      <ul>
+        <li>Scam calls pretending to be the ATO or banks</li>
+        <li>SMS with fake delivery tracking links</li>
+        <li>Voicemails asking for urgent call-backs</li>
+      </ul>
+    </section>
+
+    <!-- ✅ Action Buttons -->
+    <div class="guide-buttons">
+      <button id="read-aloud-phone-button" class="guide-button">Read Aloud</button>
+      <button id="save-phone-guide-button" class="guide-button">Save Guide</button>
+      <button id="download-phone-template-button" class="guide-button">Download Template</button>
+    </div>
+  </main>
+</div>
+
 
     <!-- Success Message Overlay -->
     <div class="overlay" id="success-overlay">
@@ -824,44 +783,65 @@
     <!-- Scam Subpages -->
 
 <!-- Phone & SMS Scams Page -->
-<div class="page" id="phone-scams-page">
-  <!-- 页面头部按钮区域 -->
-  <div class="page-header">
-    <button class="back-button">← Back</button>
-    <h2>Phone & SMS Scams</h2>
-  </div>
+<div id="phone-scams-page" class="page">
+  <header>
+    <div class="header-left">
+      <button class="back-button" aria-label="Go Back">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <span class="logo">Phone & SMS Scams</span>
+    </div>
+    <div class="header-right">
+      <button class="home-button header-button">
+        <i class="fas fa-home"></i>
+        <span class="button-text">Home</span>
+      </button>
+    </div>
+  </header>
 
-  <!-- 功能按钮区域 -->
-  <div class="action-buttons">
-    <button id="read-aloud-phone-button">🔊 Read this page aloud</button>
-    <button id="save-phone-guide-button">💾 Save to My Account</button>
-    <button id="download-phone-template-button">⬇ Download Complaint Letter Template</button>
-  </div>
+  <div class="category-content">
+    <!-- Emergency Alert Section -->
+    <section class="emergency-section">
+      <div class="emergency-box">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h3>Urgent: Report Phone Scams</h3>
+        <p>If you've received a suspicious call or text, click below to report it and protect others.</p>
+        <button id="report-scam-button" class="emergency-button">Report Now</button>
+      </div>
+    </section>
 
-  <!-- 内容主体卡片区域 -->
-  <div class="card">
-    <h3>Understanding Phone & SMS Scams</h3>
-    <p>
-      Learn how to identify scam calls and messages impersonating government agencies, banks, or delivery companies. These scams often create a false sense of urgency to get you to share personal information or send money.
-    </p>
+    <!-- Topics Section -->
+    <section class="topic-section">
+      <h2>Common Phone Scams</h2>
+      <div class="topic-list">
+        <div class="topic-card" id="fake-delivery-topic">
+          <i class="fas fa-box"></i>
+          <span>Fake Delivery Messages</span>
+        </div>
+        <div class="topic-card" id="bank-scam-topic">
+          <i class="fas fa-university"></i>
+          <span>Bank Call Scams</span>
+        </div>
+      </div>
+    </section>
 
-    <h3>Tips to Stay Safe</h3>
-    <ol>
-      <li>
-        <strong>Don’t share personal info:</strong>
-        Never give out passwords, bank details, or identification numbers.
-      </li>
-      <li>
-        <strong>Hang up and call back:</strong>
-        If you're unsure, hang up and call the official number yourself.
-      </li>
-      <li>
-        <strong>Report scams:</strong>
-        Use official government websites or hotlines to report suspicious messages or calls.
-      </li>
-    </ol>
+    <!-- Protection Tools / Guides -->
+    <section class="guides-section">
+      <h2>How to Stay Safe</h2>
+      <div class="guide-list">
+        <div class="guide-card" id="protect-number-guide">
+          <i class="fas fa-lock"></i>
+          <span>Protect Your Phone Number</span>
+        </div>
+        <div class="guide-card" id="reporting-guide">
+          <i class="fas fa-file-alt"></i>
+          <span>Guide to Reporting Scams</span>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
+
 
 
 
