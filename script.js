@@ -370,34 +370,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Scams page topic interactions
+    // Scams page topic interactions (updated to navigate to subpages)
     const phoneScamsTopic = document.getElementById('phone-scams-topic');
     if (phoneScamsTopic) {
-        phoneScamsTopic.addEventListener('click', function() {
-            showSuccessMessage('Phone & SMS Scams guide coming soon!');
+        phoneScamsTopic.addEventListener('click', function () {
+            navigateTo('phone-scams-page');
         });
     }
 
     const onlineScamsTopic = document.getElementById('online-scams-topic');
     if (onlineScamsTopic) {
-        onlineScamsTopic.addEventListener('click', function() {
-            showSuccessMessage('Online & Shopping Scams guide coming soon!');
+        onlineScamsTopic.addEventListener('click', function () {
+            navigateTo('online-scams-page');
         });
     }
 
     const relationshipScamsTopic = document.getElementById('relationship-scams-topic');
     if (relationshipScamsTopic) {
-        relationshipScamsTopic.addEventListener('click', function() {
-            showSuccessMessage('Dating & Investment Scams guide coming soon!');
+        relationshipScamsTopic.addEventListener('click', function () {
+            navigateTo('investment-scams-page');
         });
     }
 
     const unexpectedScamsTopic = document.getElementById('unexpected-scams-topic');
     if (unexpectedScamsTopic) {
-        unexpectedScamsTopic.addEventListener('click', function() {
-            showSuccessMessage('Unexpected Bills & Prize Scams guide coming soon!');
+        unexpectedScamsTopic.addEventListener('click', function () {
+            navigateTo('prize-scams-page');
         });
     }
+
 
     // Scams page protection guides interactions
     const personalInfoProtection = document.getElementById('personal-info-protection');
