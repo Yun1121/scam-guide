@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Global variables
     let currentPage = document.querySelector('.page.active');
     let previousPages = [];
-
+    
     // Navigation functions
     function navigateTo(pageId) {
         // Store current page for back navigation
@@ -432,5 +432,10 @@ document.addEventListener('DOMContentLoaded', function() {
             showSuccessMessage('Download started!');
         });
     }
+    
+    document.getElementById("home-logo").addEventListener("click", function () {
+    navigateTo("homepage");
+    });
+
 
 }); 
