@@ -433,9 +433,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    document.getElementById("home-logo").addEventListener("click", function () {
-    navigateTo("homepage");
-    });
-
+    const homeLogo = document.getElementById("home-logo");
+    if (homeLogo) {
+        homeLogo.addEventListener("click", function () {
+            navigateTo("homepage");
+        });
+    }
 
 }); 
