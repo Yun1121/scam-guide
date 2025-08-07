@@ -692,7 +692,7 @@ textarea {
 
 .secondary-button {
     background-color: #3367d6;
-    color: var(--text-color);
+    color: #ffffff;
     border: 1px solid var(--border-color);
     padding: 0.75rem 1.5rem;
     border-radius: var(--border-radius);
