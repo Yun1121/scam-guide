@@ -434,10 +434,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     const homeLogo = document.getElementById("home-logo");
-    if (homeLogo) {
-        homeLogo.addEventListener("click", function () {
-            navigateTo("homepage");
+        if (homeLogo) {
+            homeLogo.addEventListener("click", function () {
+                navigateTo("homepage");
+            });
+        }
+        document.querySelectorAll('.about-link').forEach(link => { 
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            navigateTo('about-page');
         });
-    }
+    });
+
+    document.querySelectorAll('.contact-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            navigateTo('contact-page');
+        });
+    });
+
 
 }); 
